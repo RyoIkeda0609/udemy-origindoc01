@@ -1,4 +1,4 @@
-import { HeaderItemType } from "./types";
+import { FooterItemType, HeaderItemType } from "./types";
 
 export const headerListItem: HeaderItemType[] = [
   {
@@ -26,4 +26,10 @@ export const headerListItem: HeaderItemType[] = [
     title: "代表挨拶",
     link: "/director",
   },
+];
+
+export const footerListItem: FooterItemType[] = [
+  { id: 111, title: "お問い合わせ", link: "#", icon: true },
+  { id: 112, title: "特定商品取引法", link: "#", icon: true },
+  { id: 113, title: "プライバシーポリシー", link: "#", icon: false },
 ];

@@ -1,8 +1,18 @@
-import { headerListItem } from "@/app/constants";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import React from "react";
+import { usePathname } from "next/navigation";
+import { headerListItem } from "@/app/constants";
 
 const Header = () => {
+  const pathName = usePathname();
+
+  const [active, setActive] = useState<string>("");
+  useEffect(() => {
+    setActive(pathName);
+  }, [pathName]);
+
   return (
     <div className="w-full h-20 border-b-[1px] border-gray-500 bg-white">
       <div className="h-full max-w-screen-2xl mx-auto flex items-center justify-between">
@@ -20,9 +30,17 @@ const Header = () => {
           <ul className="flex gap-8">
             {headerListItem.map((item) => (
               <Link key={item.id} href={item.link}>
-                <li className="text-gray-600 hover:text-primeColor cursor-pointer duration-300 group-relative ">
+                <li
+                  className={`${
+                    active === item.link && `text-primeColor`
+                  } text-gray-600 hover:text-primeColor cursor-pointer duration-300 group-relative `}
+                >
                   {item.title}
-                  <span className="absolute w-full scale-0 group-hover:scale-100 inline-block h-[2px] -bottom-[1px] left-0 bg-primeColor duration-500"></span>
+                  <span
+                    className={`${
+                      active === item.link && `scale-100`
+                    } absolute w-full  scale-0 group-hover:scale-100 inline-block h-[2px] -bottom-[1px] left-0 bg-primeColor duration-500`}
+                  ></span>
                 </li>
               </Link>
             ))}

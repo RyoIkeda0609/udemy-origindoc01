@@ -3,3 +3,10 @@ export type HeaderItemType = {
   title: string;
   link: string;
 };
+
+export type FooterItemType = {
+  id: number;
+  title: string;
+  link: string;
+  icon: boolean;
+};
