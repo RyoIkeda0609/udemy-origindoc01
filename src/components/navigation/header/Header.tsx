@@ -1,7 +1,7 @@
 "use client";
 
 import Logo from "./Logo";
-import Button from "./Button";
+import Button from "../../button/Button";
 import HeaderMenu from "./HeaderMenu";
 import HamburgerMenu from "./HamburgerMenu";
 

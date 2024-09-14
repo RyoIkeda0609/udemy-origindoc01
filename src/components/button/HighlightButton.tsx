@@ -1,12 +1,12 @@
 import Link from "next/link";
 
-type UnderLineButtonProps = {
+type HighlightButtonProps = {
   link: string;
   title: string;
   active: boolean;
 };
 
-const UnderLineButton = ({ link, title, active }: UnderLineButtonProps) => {
+const HighlightButton = ({ link, title, active }: HighlightButtonProps) => {
   return (
     <Link href={link}>
       <li
@@ -25,4 +25,4 @@ const UnderLineButton = ({ link, title, active }: UnderLineButtonProps) => {
   );
 };
 
-export default UnderLineButton;
+export default HighlightButton;

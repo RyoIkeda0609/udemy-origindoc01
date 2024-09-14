@@ -1,10 +1,9 @@
 "use client";
 
-import React from "react";
 import Container from "./Container";
-import { clients } from "@/app/constants";
 import Image from "next/image";
-import FadeIn, { FadeInStagger } from "./FadeIn";
+import { clients } from "@/app/constants";
+import FadeIn, { FadeInStagger } from "../animation/FadeIn";
 
 const Client = () => {
   return (

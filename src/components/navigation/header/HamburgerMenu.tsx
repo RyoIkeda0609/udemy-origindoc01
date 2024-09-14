@@ -1,6 +1,6 @@
 import Link from "next/link";
-import HamburgerMenuButton from "./HamburgerMenuButton";
-import CloseHamburgerMenuButton from "./CloseHamburgerMenuButton";
+import { OpenHamburgerMenuButton } from "./HamburgerMenuButton";
+import { CloseHamburgerMenuButton } from "./HamburgerMenuButton";
 import { useState } from "react";
 import { headerListItems } from "@/app/constants";
 
@@ -11,7 +11,7 @@ const HamburgerMenu = () => {
 
   return (
     <>
-      <HamburgerMenuButton openHamburgerMenu={openHamburgerMenu} />
+      <OpenHamburgerMenuButton openHamburgerMenu={openHamburgerMenu} />
       {showMenu && (
         <div className="w-full h-screen lg:hidden fixed top-0 left-0 bg-darkBlue bg-opacity-90 z-50 ">
           <CloseHamburgerMenuButton closeHamburgerMenu={closeHamburgerMenu} />

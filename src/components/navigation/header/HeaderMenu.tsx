@@ -1,4 +1,4 @@
-import UnderLineButton from "./UnderLineButton";
+import HighlightButton from "../../button/HighlightButton";
 import { useEffect, useState } from "react";
 import { headerListItems } from "@/app/constants";
 import { usePathname } from "next/navigation";
@@ -14,7 +14,7 @@ const HeaderMenu = () => {
   return (
     <ul className="flex gap-8">
       {headerListItems.map((item) => (
-        <UnderLineButton
+        <HighlightButton
           key={item.id}
           link={item.link}
           title={item.title}

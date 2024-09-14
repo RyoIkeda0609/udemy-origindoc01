@@ -1,5 +1,5 @@
 import Link from "next/link";
-import UnderLineBar from "./UnderLineBar";
+import UnderLineBar from "../../button/UnderLineBar";
 
 const Logo = () => {
   return (

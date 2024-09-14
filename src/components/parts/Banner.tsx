@@ -7,7 +7,7 @@ import bannerImage1 from "@/public/banner1.jpg";
 import bannerImage2 from "@/public/banner2.jpg";
 import bannerImage3 from "@/public/banner3.jpg";
 import { motion } from "framer-motion";
-import FadeIn from "./FadeIn";
+import FadeIn from "../animation/FadeIn";
 
 const Banner = () => {
   return (
