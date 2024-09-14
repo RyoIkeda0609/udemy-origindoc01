@@ -30,3 +30,19 @@ const FadeIn = (children: FadeInProps) => {
 };
 
 export default FadeIn;
+
+export const FadeInStagger = ({ faster = false, ...props }) => {
+  return (
+    <div>
+      <FadeInStaggerContext.Provider value={true}>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewport}
+          transition={{ staggerChildren: faster ? 0.12 : 0.2 }}
+          {...props}
+        ></motion.div>
+      </FadeInStaggerContext.Provider>
+    </div>
+  );
+};
