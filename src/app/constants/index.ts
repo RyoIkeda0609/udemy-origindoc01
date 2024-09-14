@@ -8,7 +8,7 @@ import logo6 from "@/public/6.svg";
 import logo7 from "@/public/7.svg";
 import logo8 from "@/public/8.svg";
 
-export const headerListItem: HeaderItemType[] = [
+export const headerListItems: HeaderItemType[] = [
   {
     id: "101",
     title: "ホーム",
